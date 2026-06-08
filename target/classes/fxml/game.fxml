@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.geometry.Insets?>
+<?import com.hangman.view.HangmanCanvas?>
+
+<BorderPane xmlns:fx="http://javafx.com/fxml"
+            fx:controller="com.hangman.controller.GameController"
+            fx:id="rootPane"
+            styleClass="root-pane"
+            stylesheets="@../css/style.css"
+            focusTraversable="true">
+
+    <!-- TOP: info bar -->
+    <top>
+        <VBox styleClass="top-bar" spacing="4">
+            <padding><Insets top="10" right="20" bottom="10" left="20"/></padding>
+            <HBox spacing="20" alignment="CENTER_LEFT">
+                <Label fx:id="playerTurnLabel" text="👤 Giocatore 1" styleClass="player-label"/>
+                <Label fx:id="difficultyLabel" text="Difficoltà: Medio" styleClass="info-chip"/>
+                <Label fx:id="errorLabel"      text="Errori: 0 / 6"    styleClass="error-chip"/>
+                <Label fx:id="scoreLabel"      text="Punteggio: 0"      styleClass="score-chip"/>
+                <Label fx:id="streakLabel"     text=""                  styleClass="streak-chip"/>
+            </HBox>
+            <!-- Multiplayer scoreboard (hidden in single player) -->
+            <VBox fx:id="multiScoreBox" spacing="2" visible="false" managed="false">
+                <Label fx:id="p1ScoreLabel" text="" styleClass="multi-score"/>
+                <Label fx:id="p2ScoreLabel" text="" styleClass="multi-score"/>
+            </VBox>
+        </VBox>
+    </top>
+
+    <!-- CENTER: hangman canvas + word -->
+    <center>
+        <VBox alignment="CENTER" spacing="20">
+            <padding><Insets top="10" right="20" bottom="0" left="20"/></padding>
+
+            <!-- Hangman drawing -->
+            <HangmanCanvas fx:id="hangmanCanvas"
+                           width="300" height="300"/>
+
+            <!-- Masked word -->
+            <Label fx:id="maskedWordLabel"
+                   text="_ _ _ _ _ _"
+                   styleClass="masked-word"/>
+        </VBox>
+    </center>
+
+    <!-- BOTTOM: keyboard + buttons -->
+    <bottom>
+        <VBox alignment="CENTER" spacing="12">
+            <padding><Insets top="8" right="20" bottom="16" left="20"/></padding>
+
+            <!-- On-screen keyboard -->
+            <FlowPane fx:id="keyboardPane"
+                      alignment="CENTER"
+                      hgap="5" vgap="5"
+                      prefWrapLength="600"/>
+
+            <!-- Action buttons -->
+            <HBox alignment="CENTER" spacing="14">
+                <Button fx:id="btnHint"    text="💡 Suggerimento" onAction="#onHint"
+                        styleClass="btn-hint" prefWidth="160" prefHeight="38"/>
+                <Button fx:id="btnNewGame" text="🔁 Nuova Partita" onAction="#onNewGame"
+                        styleClass="btn-secondary" prefWidth="160" prefHeight="38"/>
+                <Button fx:id="btnMenu"    text="🏠 Menu" onAction="#onMenu"
+                        styleClass="btn-back" prefWidth="110" prefHeight="38"/>
+            </HBox>
+        </VBox>
+    </bottom>
+
+</BorderPane>

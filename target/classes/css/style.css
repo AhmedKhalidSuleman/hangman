@@ -1,0 +1,355 @@
+/* ============================================================
+   Hangman JavaFX — Global Stylesheet
+   Dark theme with accent colors
+   ============================================================ */
+
+/* ── Root / Background ──────────────────────────────────────── */
+.root-pane {
+    -fx-background-color: linear-gradient(to bottom, #1a1a2e, #16213e);
+    -fx-background-radius: 0;
+}
+
+.root {
+    -fx-font-family: "Segoe UI", "SF Pro Display", Arial, sans-serif;
+    -fx-background-color: #1a1a2e;
+}
+
+/* ── Labels ─────────────────────────────────────────────────── */
+.title-label {
+    -fx-font-size: 42px;
+    -fx-font-weight: bold;
+    -fx-text-fill: #e94560;
+    -fx-effect: dropshadow(gaussian, #e9456088, 18, 0, 0, 4);
+}
+
+.subtitle-label {
+    -fx-font-size: 16px;
+    -fx-text-fill: #a0a8c0;
+}
+
+.section-label {
+    -fx-font-size: 14px;
+    -fx-font-weight: bold;
+    -fx-text-fill: #7f8fd4;
+    -fx-letter-spacing: 1.5px;
+}
+
+.field-label {
+    -fx-text-fill: #c0c8e0;
+    -fx-font-size: 13px;
+}
+
+.info-label {
+    -fx-text-fill: #a0b0d0;
+    -fx-font-size: 14px;
+}
+
+.footer-label {
+    -fx-text-fill: #606880;
+    -fx-font-size: 12px;
+}
+
+.error-label {
+    -fx-text-fill: #e74c3c;
+    -fx-font-size: 13px;
+}
+
+/* ── Streak ─────────────────────────────────────────────────── */
+.streak-label {
+    -fx-text-fill: #f39c12;
+    -fx-font-size: 14px;
+    -fx-font-weight: bold;
+}
+
+/* ── Masked word (the blanks) ───────────────────────────────── */
+.masked-word {
+    -fx-font-size: 36px;
+    -fx-font-weight: bold;
+    -fx-text-fill: #ffffff;
+    -fx-letter-spacing: 6px;
+    -fx-effect: dropshadow(gaussian, #ffffff44, 8, 0, 0, 2);
+}
+
+/* ── Top bar chips ──────────────────────────────────────────── */
+.top-bar {
+    -fx-background-color: #0f3460;
+    -fx-border-color: #1a4a80;
+    -fx-border-width: 0 0 2 0;
+}
+
+.player-label {
+    -fx-text-fill: #ffffff;
+    -fx-font-weight: bold;
+    -fx-font-size: 15px;
+}
+
+.info-chip {
+    -fx-text-fill: #a0c4ff;
+    -fx-font-size: 13px;
+    -fx-background-color: #1a3a60;
+    -fx-padding: 3 10 3 10;
+    -fx-background-radius: 12;
+}
+
+.error-chip {
+    -fx-text-fill: #2ecc71;
+    -fx-font-size: 13px;
+    -fx-font-weight: bold;
+    -fx-background-color: #1a3a30;
+    -fx-padding: 3 10 3 10;
+    -fx-background-radius: 12;
+}
+
+.score-chip {
+    -fx-text-fill: #ffd700;
+    -fx-font-size: 13px;
+    -fx-font-weight: bold;
+    -fx-background-color: #3a3010;
+    -fx-padding: 3 10 3 10;
+    -fx-background-radius: 12;
+}
+
+.streak-chip {
+    -fx-text-fill: #f39c12;
+    -fx-font-size: 13px;
+    -fx-font-weight: bold;
+}
+
+.multi-score {
+    -fx-text-fill: #c0d8ff;
+    -fx-font-size: 12px;
+}
+
+/* ── Radio Buttons ──────────────────────────────────────────── */
+.radio-option {
+    -fx-text-fill: #c0c8e8;
+    -fx-font-size: 14px;
+}
+
+.radio-option:selected {
+    -fx-text-fill: #e94560;
+    -fx-font-weight: bold;
+}
+
+.radio-button .radio {
+    -fx-border-color: #7f8fd4;
+    -fx-border-radius: 50%;
+}
+
+/* ── Text Fields ────────────────────────────────────────────── */
+.name-field {
+    -fx-background-color: #0f2040;
+    -fx-text-fill: #ffffff;
+    -fx-prompt-text-fill: #607090;
+    -fx-border-color: #2a4a80;
+    -fx-border-radius: 6;
+    -fx-background-radius: 6;
+    -fx-font-size: 14px;
+    -fx-padding: 8 12 8 12;
+}
+
+.name-field:focused {
+    -fx-border-color: #e94560;
+    -fx-effect: dropshadow(gaussian, #e9456066, 10, 0, 0, 0);
+}
+
+/* ── Buttons ────────────────────────────────────────────────── */
+.btn-primary {
+    -fx-background-color: #e94560;
+    -fx-text-fill: #ffffff;
+    -fx-font-weight: bold;
+    -fx-font-size: 16px;
+    -fx-background-radius: 10;
+    -fx-border-radius: 10;
+    -fx-cursor: hand;
+    -fx-effect: dropshadow(gaussian, #e9456066, 10, 0, 0, 3);
+}
+
+.btn-primary:hover {
+    -fx-background-color: #ff607a;
+    -fx-effect: dropshadow(gaussian, #e94560aa, 16, 0, 0, 4);
+    -fx-scale-x: 1.04;
+    -fx-scale-y: 1.04;
+}
+
+.btn-primary:pressed {
+    -fx-scale-x: 0.97;
+    -fx-scale-y: 0.97;
+}
+
+.btn-secondary {
+    -fx-background-color: #0f3460;
+    -fx-text-fill: #a0c4ff;
+    -fx-font-weight: bold;
+    -fx-font-size: 14px;
+    -fx-background-radius: 10;
+    -fx-border-color: #2a5490;
+    -fx-border-radius: 10;
+    -fx-cursor: hand;
+}
+
+.btn-secondary:hover {
+    -fx-background-color: #1a4a80;
+    -fx-text-fill: #ffffff;
+    -fx-scale-x: 1.03;
+    -fx-scale-y: 1.03;
+}
+
+.btn-hint {
+    -fx-background-color: #d4a017;
+    -fx-text-fill: #1a1a1a;
+    -fx-font-weight: bold;
+    -fx-font-size: 13px;
+    -fx-background-radius: 8;
+    -fx-border-radius: 8;
+    -fx-cursor: hand;
+}
+
+.btn-hint:hover {
+    -fx-background-color: #f0b820;
+    -fx-scale-x: 1.03;
+    -fx-scale-y: 1.03;
+}
+
+.btn-hint:disabled {
+    -fx-opacity: 0.4;
+}
+
+.btn-back {
+    -fx-background-color: #2c3e50;
+    -fx-text-fill: #95a5a6;
+    -fx-font-size: 13px;
+    -fx-background-radius: 8;
+    -fx-border-radius: 8;
+    -fx-cursor: hand;
+}
+
+.btn-back:hover {
+    -fx-background-color: #3d5166;
+    -fx-text-fill: #ecf0f1;
+}
+
+.btn-danger {
+    -fx-background-color: #8e2020;
+    -fx-text-fill: #ffcccc;
+    -fx-font-weight: bold;
+    -fx-font-size: 13px;
+    -fx-background-radius: 8;
+    -fx-border-radius: 8;
+    -fx-cursor: hand;
+}
+
+.btn-danger:hover {
+    -fx-background-color: #c0392b;
+    -fx-text-fill: #ffffff;
+}
+
+/* ── Keyboard buttons ───────────────────────────────────────── */
+.key-button {
+    -fx-background-color: #1e3a5f;
+    -fx-text-fill: #c0d4f0;
+    -fx-font-weight: bold;
+    -fx-font-size: 14px;
+    -fx-background-radius: 6;
+    -fx-border-color: #2a4a70;
+    -fx-border-radius: 6;
+    -fx-cursor: hand;
+    -fx-min-width: 40;
+    -fx-min-height: 40;
+}
+
+.key-button:hover {
+    -fx-background-color: #2a5080;
+    -fx-text-fill: #ffffff;
+    -fx-border-color: #4a80c0;
+}
+
+.key-button:disabled {
+    -fx-opacity: 1.0; /* override default dim so we see colors */
+}
+
+.key-correct {
+    -fx-background-color: #1a6632 !important;
+    -fx-text-fill: #2ecc71 !important;
+    -fx-border-color: #27ae60 !important;
+}
+
+.key-wrong {
+    -fx-background-color: #5a1010 !important;
+    -fx-text-fill: #e74c3c !important;
+    -fx-border-color: #c0392b !important;
+}
+
+/* ── Separator ──────────────────────────────────────────────── */
+.separator .line {
+    -fx-border-color: #2a3a60;
+}
+
+/* ── TableView ──────────────────────────────────────────────── */
+.table-view {
+    -fx-background-color: #0f2040;
+    -fx-border-color: #1a3a60;
+    -fx-border-radius: 8;
+    -fx-background-radius: 8;
+    -fx-table-cell-border-color: #1a3a60;
+}
+
+.table-view .column-header {
+    -fx-background-color: #0f3460;
+    -fx-text-fill: #7f8fd4;
+}
+
+.table-view .column-header .label {
+    -fx-text-fill: #7fb8ff;
+    -fx-font-weight: bold;
+    -fx-font-size: 13px;
+}
+
+.table-row-cell {
+    -fx-background-color: #0f1e3a;
+    -fx-text-fill: #c0d4f0;
+}
+
+.table-row-cell:odd {
+    -fx-background-color: #0a1830;
+}
+
+.table-row-cell:selected {
+    -fx-background-color: #e9456033;
+    -fx-text-fill: #ffffff;
+}
+
+.table-cell {
+    -fx-text-fill: #c0d4f0;
+    -fx-font-size: 13px;
+}
+
+/* ── ScrollBar styling ──────────────────────────────────────── */
+.scroll-bar:vertical .thumb,
+.scroll-bar:horizontal .thumb {
+    -fx-background-color: #2a4a80;
+    -fx-background-radius: 4;
+}
+
+.scroll-bar:vertical .track,
+.scroll-bar:horizontal .track {
+    -fx-background-color: #0f1830;
+}
+
+/* ── Alert dialogs ──────────────────────────────────────────── */
+.dialog-pane {
+    -fx-background-color: #1a1a2e;
+}
+
+.dialog-pane .content {
+    -fx-text-fill: #c0d4f0;
+}
+
+.dialog-pane .header-panel {
+    -fx-background-color: #0f3460;
+}
+
+.dialog-pane .header-panel .label {
+    -fx-text-fill: #ffffff;
+    -fx-font-weight: bold;
+}
