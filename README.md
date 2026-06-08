@@ -1,8 +1,6 @@
 # 🎯 Hangman JavaFX
 
-> **Gioco dell'Impiccato** — Applicazione desktop sviluppata con **Java 21**, **JavaFX 21** e **Maven**.  
-> Progetto ispirato agli esempi del repository [nbicocchi/learn-java-javafx](https://github.com/nbicocchi/learn-java-javafx/tree/main/code), con funzionalità estese rispetto alla versione base.
-
+> **Gioco dell'Impiccato** 
 ---
 
 ## 📸 Screenshots
