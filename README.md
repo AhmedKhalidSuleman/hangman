@@ -21,13 +21,12 @@
 
 ## 🎮 Funzionalità
 
-### ✅ Funzionalità Base (equivalenti ai progetti di riferimento)
-- Gioco dell'Impiccato completo con disegno progressivo del personaggio su `Canvas`
+### ✅ Funzionalità Base 
+- Gioco dell'Impiccato completo con disegno progressivo del personaggio 
 - Tastiera virtuale su schermo + input da tastiera fisica
-- Parole in italiano e inglese di varia difficoltà
 - Schermata di vittoria / sconfitta con la parola rivelata
 
-### 🆕 Funzionalità Aggiuntive (non presenti nei progetti originali)
+### 🆕 Funzionalità Aggiuntive 
 
 #### 1. 🏆 Sistema di Punteggio e Streak
 - **Punteggio dinamico** basato su:
@@ -58,7 +57,7 @@
 - Possibilità di inserire nomi personalizzati per ciascun giocatore
 
 #### 5. 📊 Classifica Persistente
-- I punteggi vengono salvati in `~/.hangman/scores.json` (Gson)
+- I punteggi vengono salvati in `~/.hangman/scores.json` 
 - Top 20 punteggi visualizzati in una `TableView` formattata
 - Il primo posto viene evidenziato con una tinta dorata
 - Pulsante per cancellare tutti i punteggi
@@ -137,70 +136,6 @@ Ogni schermata è definita in un file FXML separato, tenendo la struttura visiva
 
 ---
 
-## 🚀 Come eseguire il progetto
-
-### Prerequisiti
-- **Java 21** (JDK) — [Scarica da Adoptium](https://adoptium.net/)
-- **Maven 3.8+** — [Scarica da Apache](https://maven.apache.org/)
-
-### Verifica versioni
-```bash
-java -version   # deve mostrare 21+
-mvn -version    # deve mostrare 3.8+
-```
-
-### Avvio rapido con Maven
-```bash
-# Entra nella cartella del progetto
-cd hangman-javafx
-
-# Avvia direttamente con il plugin JavaFX
-mvn javafx:run
-```
-
-### Build e JAR eseguibile
-```bash
-# Compila e crea il fat-jar
-mvn clean package
-
-# Esegui il fat-jar (non richiede Maven installato sul PC di destinazione)
-java -jar target/hangman-javafx-1.0.0-fat.jar
-```
-
-> **Nota**: il fat-jar include JavaFX e tutte le dipendenze, ma richiede **Java 21** installato sul sistema.
-
----
-
-## 📦 Dipendenze Maven
-
-```xml
-<!-- JavaFX 21 -->
-<dependency>
-    <groupId>org.openjfx</groupId>
-    <artifactId>javafx-controls</artifactId>
-    <version>21.0.2</version>
-</dependency>
-<dependency>
-    <groupId>org.openjfx</groupId>
-    <artifactId>javafx-fxml</artifactId>
-    <version>21.0.2</version>
-</dependency>
-
-<!-- Gson per serializzazione JSON dei punteggi -->
-<dependency>
-    <groupId>com.google.code.gson</groupId>
-    <artifactId>gson</artifactId>
-    <version>2.10.1</version>
-</dependency>
-```
-
-**Plugin usati:**
-- `javafx-maven-plugin 0.0.8` — per `mvn javafx:run`
-- `maven-compiler-plugin 3.11.0` — compilazione Java 21
-- `maven-shade-plugin 3.5.1` — fat-jar eseguibile
-
----
-
 ## 🎯 Come si Gioca
 
 ### Giocatore Singolo
@@ -218,29 +153,7 @@ java -jar target/hangman-javafx-1.0.0-fat.jar
 4. Il Giocatore 2 gioca normalmente cercando di indovinarla
 5. Al termine si può fare un altro round con i ruoli invertiti
 6. Il **scoreboard** mostra punti e vittorie di entrambi in tempo reale
-
----
-
-## 👨‍💻 Sviluppato con AI-Assisted Coding
-
-Questo progetto è stato sviluppato con l'ausilio di strumenti di **AI-assisted coding**, come richiesto dai requisiti del progetto. L'AI è stata utilizzata per:
-- Generazione della struttura base del progetto
-- Implementazione della logica di gioco
-- Design del tema grafico CSS
-- Documentazione e README
-
-Il codice è stato revisionato, compreso e può essere discusso e spiegato in ogni sua parte.
-
----
-
-## 📝 Note Aggiuntive
-
-- I punteggi vengono salvati localmente in `~/.hangman/scores.json`
-- Il gioco supporta parole in **italiano** e **inglese**
-- La tastiera fisica funziona sempre durante il gioco (basta che la finestra sia in focus)
-- La streak viene **resettata** a ogni sconfitta in modalità singolo giocatore
-- In modalità multiplayer i punteggi sono separati e mostrati entrambi in tempo reale
-
+   
 ---
 
 *Progetto per il corso di Programmazione ad Oggetti — Università di Modena e Reggio Emilia*
