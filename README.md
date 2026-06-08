@@ -6,16 +6,16 @@
 ## 📸 Screenshots
 
 ### Menu Principale
-![Menu](docs/screenshots/screenshot_menu.png)
+![Menu](docs/screenshots/paginaInizale.png)
 
 ### Schermata di Gioco
-![Game](docs/screenshots/screenshot_game.png)
+![Game](docs/screenshots/schermataDiGioco.png)
 
 ### Modalità Multiplayer
-![Multiplayer](docs/screenshots/screenshot_multiplayer.png)
+![Multiplayer](docs/screenshots/multiplayer.png)
 
 ### Classifica
-![Leaderboard](docs/screenshots/screenshot_leaderboard.png)
+![Leaderboard](docs/screenshots/classifica.png)
 
 ---
 
