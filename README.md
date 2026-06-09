@@ -3,22 +3,6 @@
 > **Gioco dell'Impiccato** 
 ---
 
-## 📸 Screenshots
-
-### Menu Principale
-![Menu](docs/screenshots/paginaInizale.png)
-
-### Schermata di Gioco
-![Game](docs/screenshots/schermataDiGioco.png)
-
-### Modalità Multiplayer
-![Multiplayer](docs/screenshots/multiplayer.png)
-
-### Classifica
-![Leaderboard](docs/screenshots/classifica.png)
-
----
-
 ## 🎮 Funzionalità
 
 ### ✅ Funzionalità Base 
@@ -61,6 +45,22 @@
 - Top 20 punteggi visualizzati in una `TableView` formattata
 - Il primo posto viene evidenziato con una tinta dorata
 - Pulsante per cancellare tutti i punteggi
+
+---
+
+## 📸 Screenshots
+
+### Menu Principale
+![Menu](docs/screenshots/paginaInizale.png)
+
+### Schermata di Gioco
+![Game](docs/screenshots/schermataDiGioco.png)
+
+### Modalità Multiplayer
+![Multiplayer](docs/screenshots/multiplayer.png)
+
+### Classifica
+![Leaderboard](docs/screenshots/classifica.png)
 
 ---
 
