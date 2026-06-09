@@ -104,37 +104,6 @@ hangman-javafx/
                 └── style.css            # Dark theme CSS completo
 ```
 
----
-
-## 🧱 Architettura e Scelte Progettuali
-
-### Pattern MVC (Model-View-Controller)
-Il progetto segue rigorosamente il pattern **MVC** applicato a JavaFX:
-
-| Layer | Classi | Responsabilità |
-|-------|--------|----------------|
-| **Model** | `GameState`, `Difficulty`, `GameMode`, `WordBank`, `ScoreEntry` | Logica di gioco pura, nessuna dipendenza da JavaFX |
-| **View** | File FXML + `HangmanCanvas` + CSS | Presentazione, layout, stile |
-| **Controller** | `*Controller.java` | Collegamento tra Model e View, gestione eventi |
-
-### Scelte Tecniche
-
-#### `HangmanCanvas` — Custom Node
-Il disegno dell'impiccato è realizzato tramite una classe custom che estende `Canvas`. Il metodo `draw(errors, maxErrors)` scala dinamicamente le parti del corpo in base alla difficoltà, così ogni livello usa tutte le parti disponibili (8 in totale: testa, corpo, 2 braccia, 2 gambe, 2 piedi).
-
-#### `ScoreService` — Singleton + Gson
-Il servizio di salvataggio punteggi usa il pattern **Singleton** per garantire una singola istanza. La serializzazione è delegata a **Gson**, che converte automaticamente le liste di `ScoreEntry` in JSON. I file vengono salvati in `~/.hangman/` per essere indipendenti dalla posizione del JAR.
-
-#### `Launcher` — Fat-JAR workaround
-JavaFX richiede che la classe che chiama `launch()` **non estenda `Application`** quando viene eseguita da un fat-jar (shadow jar). Per questo motivo esiste `Launcher.java`, che funge da entry point e delega l'avvio a `HangmanApp`.
-
-#### Navigazione tra schermate
-Invece di aprire nuove `Stage`, il progetto usa un approccio **scene-switching**: `HangmanApp.switchScene()` e `switchSceneAndGetController()` sostituiscono la `Scene` della finestra principale. Questo garantisce un'esperienza fluida e un'unica finestra.
-
-#### FXML + CSS
-Ogni schermata è definita in un file FXML separato, tenendo la struttura visiva separata dalla logica. Il tema dark è definito interamente in `style.css` con variabili di colore coerenti.
-
----
 
 ## 🎯 Come si Gioca
 
